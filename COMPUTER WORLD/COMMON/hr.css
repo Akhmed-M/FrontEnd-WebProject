@@ -1,0 +1,43 @@
+.head-hr {
+  margin-top: 25px;
+  background-color: black;
+  border: none;
+  height: 8px;
+  position: relative;
+}
+.head-hr::before {
+  content: "";
+  position: absolute;
+  width: 70px;
+  height: 1.7px;
+  background-color: var(--mainColor);
+  box-shadow: 0 0 10px var(--mainColor);
+  animation-name: hr-border;
+  animation-duration: 3s;
+  animation-timing-function: linear;
+  animation-iteration-count: infinite;
+  animation-direction: alternate;
+}
+.head-hr::after {
+  content: "";
+  position: absolute;
+  width: 70px;
+  height: 1.7px;
+  bottom: 0;
+  background-color: var(--mainColor);
+  box-shadow: 0 0 10px var(--mainColor);
+  animation-name: hr-border;
+  animation-duration: 3s;
+  animation-timing-function: linear;
+  animation-iteration-count: infinite;
+  animation-direction: alternate-reverse;
+}
+@keyframes hr-border {
+  to {
+    transform: translateX(1310px);
+  }
+}
+
+hr {
+  border: 1px solid hsla(3, 81%, 42%, 0.372);
+}

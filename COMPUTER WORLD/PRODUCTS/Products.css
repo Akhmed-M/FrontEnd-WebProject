@@ -1,0 +1,217 @@
+/* :root {
+  --mainColor: hsl(3, 81%, 42%);
+  --themeColor1: rgb(21, 19, 19);
+  --themeColor2: rgb(35, 33, 33);
+  --textColor: #b7b2b2;
+  --productTheme: gray;
+  --productTextColor: black;
+  --white: white;
+} */
+
+body {
+  background-color: var(--themeColor1);
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.section-title {
+  width: 400px;
+  font-size: 3em;
+  color: var(--textColor);
+  text-align: center;
+  position: relative;
+  margin: 10px auto;
+  transition: 0.5s all ease;
+  font-family: "Times New Roman", Times, serif;
+  cursor: default;
+}
+.section-title::after {
+  content: "";
+  position: absolute;
+  background-color: var(--mainColor);
+  width: 100%;
+  height: 2px;
+  box-shadow: 0 0 6px var(--mainColor);
+  bottom: 0;
+  left: 0;
+  transform: scaleX(0);
+  transition: 0.5s all ease;
+}
+.section-title:hover {
+  transform: scale(1.05);
+  letter-spacing: 3px;
+}
+.section-title:hover::after {
+  transform: scaleX(0.7);
+}
+
+.accessories {
+  margin: 40px auto;
+  padding: 15px;
+  width: 95%;
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  gap: 30px;
+  border: 2px dashed hsla(3, 81%, 42%, 0.372);
+  background-image: url(../PHOTOS/Backimages/1000_F_93152115_iplOX3rTJZci61xhDjrhUB1NspGe5q7e-removebg-preview.png);
+}
+.accessories .card {
+  width: 20%;
+  height: 27em;
+  background-color: var(--themeColor2);
+  position: relative;
+  border-radius: 8px;
+  box-shadow: 0 0 8px black;
+  color: var(--textColor);
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  border: 1.8px solid var(--mainColor);
+  overflow: hidden;
+  font-family: Arial, Helvetica, sans-serif;
+  letter-spacing: 0.5px;
+  transition: 0.4s ease;
+}
+.accessories .card div {
+  padding-bottom: 10px;
+}
+.accessories .card .card-title {
+  width: 100%;
+  height: 10%;
+  padding: 12px;
+  font-size: 0.9em;
+  font-weight: bold;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  line-height: 20px;
+}
+.accessories .card .img {
+  background-color: var(--themeColor1);
+  width: 100%;
+  height: 50%;
+  margin: 0 auto;
+}
+.accessories .card:hover {
+  transform: scale(1.03, 1.03);
+  transform-origin: center center;
+}
+.accessories .info-section {
+  width: 100%;
+  height: 11%;
+}
+.accessories .info-section .info {
+  width: 100%;
+  padding: 2px;
+  color: #b1a7a7;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+}
+.accessories .info-section .info div {
+  width: 45%;
+  padding: 1.5%;
+  font-size: 0.9em;
+}
+.accessories .info-section .info div:nth-child(odd) {
+  color: var(--textColor);
+}
+.accessories .info-section .info div:nth-child(even) {
+  text-align: end;
+  color: var(--mainColor);
+}
+.accessories .card .info-section::before {
+  content: "";
+  position: absolute;
+  width: 0;
+  height: 32%;
+  border-left: 2px dashed var(--productTheme);
+  left: 50%;
+}
+.accessories .card .info-section::after {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 0;
+  border-bottom: 2px dashed var(--productTheme);
+  bottom: 12%;
+}
+.accessories .card .price {
+  height: 4%;
+  padding-left: 0.2em;
+  font-size: 1.3em;
+  color: var(--mainColor);
+  margin-bottom: 5%;
+}
+
+.accessories .card .buy-section {
+  width: 100%;
+  height: 13%;
+  display: flex;
+  font-weight: bold;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+  color: var(--productTextColor);
+}
+.accessories .card .buy-section .addToCartBtn {
+  width: 84px;
+  height: 35px;
+  margin-top: 6px;
+  background: none;
+  border: none;
+  border-radius: 5px;
+  position: relative;
+  z-index: 1;
+  cursor: pointer;
+  color: (var(--productTextColor));
+}
+.accessories .card .buy-section .counter {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.accessories .card .buy-section .counter button {
+  width: 25px;
+  height: 22px;
+  margin: 0 6px;
+  font-size: 18px;
+  background: none;
+  border: none;
+  cursor: pointer;
+  position: relative;
+  z-index: 1;
+  color: var(--productTextColor);
+}
+.accessories .card .buy-section .counter span {
+  color: var(--productTheme);
+}
+
+.accessories .card .buy-section .addToCartBtn::before,
+.accessories .card .buy-section .counter button::before {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  z-index: -2;
+  background-color: var(--productTheme);
+}
+.accessories .card .buy-section .addToCartBtn::after,
+.accessories .card .buy-section .counter button::after {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  z-index: -1;
+  transform-origin: left center;
+  transform: rotateY(90deg);
+  transition: all 0.2s ease;
+  background-color: brown;
+}
+.accessories .card .buy-section .addToCartBtn:hover::after,
+.accessories .card .buy-section .counter button:hover::after {
+  transform: rotateY(0deg);
+}

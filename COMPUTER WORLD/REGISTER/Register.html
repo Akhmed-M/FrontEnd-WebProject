@@ -1,0 +1,269 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css"
+      integrity="sha512-MV7K8+y+gLIBoVD59lQIYicR65iaqukzvf/nwasF0nqhPay5w/9lJmVM2hMDcnK1OnMGCdVK+iQrJ7lzPJQd1w=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <!-- CSS -->
+    <link rel="stylesheet" href="../COMMON/all.css" />
+    <link rel="stylesheet" href="./Register.css" />
+    <link
+      rel="shortcut icon"
+      href="../PHOTOS/Icons/register.jpg"
+      type="image/x-icon"
+    />
+    <link
+      href="https://unpkg.com/boxicons@2.1.2/css/boxicons.min.css"
+      rel="stylesheet"
+    />
+    <title>Register</title>
+  </head>
+
+  <body>
+    <header>
+      <div class="name">
+        <span>COMPUTER WORLD</span>
+        <span>COMPUTER WORLD</span>
+      </div>
+      <div class="end-section">
+        <!-- <input type="search" class="head-search" placeholder="Search..." /> -->
+        <label class="switch">
+          <input type="checkbox" id="toggle" />
+          <span class="slider"></span>
+        </label>
+      </div>
+    </header>
+    <div class="img-search-pattern">
+      <div class="img"></div>
+    </div>
+
+    <nav>
+      <a href="../HOME/Home.html">Home</a>
+      <a href="../PRODUCTS/Products.html">Products</a>
+      <a href="../CART/Cart.html">Your Cart</a>
+      <a href="../REGISTER/Register.html">Register</a>
+      <a href="../ABOUT/About.html">About Us</a>
+    </nav>
+    <hr class="head-hr" />
+    <main>
+      <section class="container forms">
+        <div class="form login">
+          <div class="form-content">
+            <div class="header">Login</div>
+            <form action="../HOME/Home.html">
+              <div class="field input-field">
+                <input
+                  type="email"
+                  placeholder="Email"
+                  class="input"
+                  required
+                />
+              </div>
+
+              <div class="field input-field">
+                <input
+                  type="password"
+                  placeholder="Password"
+                  class="password"
+                  required
+                />
+                <i class="bx bx-hide eye-icon"></i>
+              </div>
+
+              <div class="form-link">
+                <a href="#" class="forgot-pass">Forgot password?</a>
+              </div>
+
+              <div class="field button-field">
+                <button>Login</button>
+              </div>
+            </form>
+
+            <div class="form-link">
+              <span
+                >Don't have an account?
+                <a href="../HOME/Home.html" class="link signup-link"
+                  >Signup</a
+                ></span
+              >
+            </div>
+          </div>
+
+          <div class="line"></div>
+
+          <div class="media-options">
+            <a href="#" class="field facebook">
+              <i class="bx bxl-facebook facebook-icon"></i>
+              <span>Login with Facebook</span>
+            </a>
+          </div>
+
+          <div class="media-options">
+            <a href="#" class="field google">
+              <img src="../PHOTOS/icons/google.png" alt="" class="google-img" />
+              <span>Login with Google</span>
+            </a>
+          </div>
+        </div>
+        <div class="form signup">
+          <div class="form-content">
+            <div class="header">Signup</div>
+            <form actio="home.html">
+              <div class="field input-field">
+                <input
+                  type="email"
+                  placeholder="Email"
+                  class="input"
+                  required
+                />
+              </div>
+
+              <div class="field input-field">
+                <input
+                  type="password"
+                  placeholder="Create password"
+                  class="password"
+                  required
+                />
+                <i class="bx bx-hide eye-icon"></i>
+              </div>
+
+              <div class="field input-field">
+                <input
+                  type="password"
+                  placeholder="Confirm password"
+                  class="password"
+                  required
+                />
+                <i class="bx bx-hide eye-icon"></i>
+              </div>
+
+              <div class="field button-field">
+                <button>Sign Up</button>
+              </div>
+            </form>
+
+            <div class="form-link">
+              <span
+                >Already have an account?
+                <a href="../HOME/Home.html" class="link login-link"
+                  >Login</a
+                ></span
+              >
+            </div>
+          </div>
+
+          <div class="line"></div>
+
+          <div class="media-options">
+            <a href="#" class="field facebook">
+              <i class="bx bxl-facebook facebook-icon"></i>
+              <span>Login with Facebook</span>
+            </a>
+          </div>
+
+          <div class="media-options">
+            <a href="#" class="field google">
+              <img src="../PHOTOS/icons/google.png" alt="" class="google-img" />
+              <span>Login with Google</span>
+            </a>
+          </div>
+        </div>
+      </section>
+      <script>
+        const forms = document.querySelector(".forms"),
+          pwShowHide = document.querySelectorAll(".eye-icon"),
+          links = document.querySelectorAll(".link");
+
+        pwShowHide.forEach((eyeIcon) => {
+          eyeIcon.addEventListener("click", () => {
+            let pwFields =
+              eyeIcon.parentElement.parentElement.querySelectorAll(".password");
+
+            pwFields.forEach((password) => {
+              if (password.type === "password") {
+                password.type = "text";
+                eyeIcon.classList.replace("bx-hide", "bx-show");
+                return;
+              }
+              password.type = "password";
+              eyeIcon.classList.replace("bx-show", "bx-hide");
+            });
+          });
+        });
+        links.forEach((link) => {
+          link.addEventListener("click", (e) => {
+            e.preventDefault();
+            forms.classList.toggle("show-signup");
+          });
+        });
+      </script>
+    </main>
+    <footer>
+      <div class="footer-container">
+        <div class="footer-column1">
+          <p>
+            If you have any question, please contact us at: <br />
+            Computer.World@gmail.com
+          </p>
+
+          <h3>Follow Us</h3>
+          <div class="social-icons">
+            <a href="#">
+              <i class="fab fa-facebook-square fa-2x"></i>
+            </a>
+            <a href="#">
+              <i class="fab fa-instagram fa-2x"></i>
+            </a>
+            <a href="#">
+              <i class="fab fa-twitter-square fa-2x"></i>
+            </a>
+            <a href="#">
+              <i class="fab fa-github-square fa-2x"></i>
+            </a>
+          </div>
+        </div>
+
+        <div class="footer-column">
+          <h3>CATEGORIES</h3>
+          <a href="../PRODUCTS/Products.html"
+            ><p class="details">Products</p></a
+          >
+          <a href="../CART/Cart.html"><p class="details">Your Cart</p></a>
+          <a href="../REGISTER/Register.html"
+            ><p class="details">Register</p></a
+          >
+        </div>
+
+        <div class="footer-column">
+          <h3>CUSTOMER SERVICE</h3>
+          <a href="../ABOUT/About.html"><p class="details">Contact Us</p></a>
+          <a href="#"><p class="details">Returns Policy</p></a>
+          <a href="../ABOUT/About.html"><p class="details">Help & FAQ</p></a>
+        </div>
+
+        <div class="footer-column">
+          <h3>ABOUT US</h3>
+          <a href="../ABOUT/About.html"><p class="details">About Us</p></a>
+          <a href="#"><p class="details">Privacy Policy</p></a>
+          <a href="#"><p class="details">Terms & Conditions</p></a>
+        </div>
+      </div>
+      <hr />
+      <p class="copyright">&#169; Computer World</p>
+    </footer>
+    <button id="scroll-top-button">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+        <path d="M12 3l-9 9h6v9h6v-9h6z" />
+      </svg>
+    </button>
+  </body>
+  <!-- FOR SCROLL & TOGGLE FUNCTIONALITY -->
+  <script src="../COMMON/scroll.js"></script>
+  <script src="../COMMON/Toggle-Mode.js"></script>
+  <script src="./Register.js"></script>
+</html>

@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <link
+      rel="stylesheet"
+      href="https://use.fontawesome.com/releases/v5.14.0/css/all.css"
+      integrity="sha384-HzLeBuhoNPvSl5KYnjx0BT+WB0QEEqLprO+NBkkk5gbc67FTaL7XIGa2w1L0Xbgc"
+      crossorigin="anonymous"
+    />
+    <link
+      rel="shortcut icon"
+      type="x-icon"
+      href="../PHOTOS/icons/cart-icon.png"
+    />
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="../COMMON/all.css" />
+    <link rel="stylesheet" href="./Cart.css" />
+
+    <!-- JQUERY -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <title>Cart</title>
+  </head>
+  <body>
+    <header>
+      <div class="name">
+        <span>COMPUTER WORLD</span>
+        <span>COMPUTER WORLD</span>
+      </div>
+      <div class="end-section">
+        <!-- <input type="search" class="head-search" placeholder="Search..." /> -->
+        <label class="switch">
+          <input type="checkbox" id="toggle" />
+          <span class="slider"></span>
+        </label>
+      </div>
+    </header>
+    <div class="img-search-pattern">
+      <div class="img"></div>
+    </div>
+
+    <nav>
+      <a href="../HOME/Home.html">Home</a>
+      <a href="../PRODUCTS/Products.html">Products</a>
+      <a href="../CART/Cart.html">Your Cart</a>
+      <a href="../REGISTER/Register.html">Register</a>
+      <a href="../ABOUT/About.html">About Us</a>
+    </nav>
+    <hr class="head-hr" />
+
+    <main>
+      <div class="tools-container">
+        <div class="total-cost-container">
+          <span id="total"
+            >Total : &nbsp;&nbsp;<span id="totalCost">0</span>$</span
+          >
+          <span id="total-icon">
+            <ion-icon name="bag-handle-outline"></ion-icon>
+          </span>
+        </div>
+        <button id="clearCartBtn">
+          <span id="trash">Clear&nbsp; Cart</span>
+          <span class="trash-icon">
+            <ion-icon name="trash-outline"></ion-icon>
+          </span>
+        </button>
+      </div>
+      <div id="cart-container">
+        <!-- PRODUCTS GO HERE -->
+        <div id="emptyCartMessage">Cart is Empty</div>
+      </div>
+    </main>
+
+    <footer>
+      <div class="footer-container">
+        <div class="footer-column1">
+          <p>
+            If you have any question, please contact us at: <br />
+            Computer.World@gmail.com
+          </p>
+
+          <h3>Follow Us</h3>
+          <div class="social-icons">
+            <a href="#">
+              <i class="fab fa-facebook-square fa-2x"></i>
+            </a>
+            <a href="#">
+              <i class="fab fa-instagram fa-2x"></i>
+            </a>
+            <a href="#">
+              <i class="fab fa-twitter-square fa-2x"></i>
+            </a>
+            <a href="#">
+              <i class="fab fa-github-square fa-2x"></i>
+            </a>
+          </div>
+        </div>
+
+        <div class="footer-column">
+          <h3>CATEGORIES</h3>
+          <a href="../PRODUCTS/Products.html"
+            ><p class="details">Products</p></a
+          >
+          <a href="../CART/Cart.html"><p class="details">Your Cart</p></a>
+          <a href="../REGISTER/Register.html"
+            ><p class="details">Register</p></a
+          >
+        </div>
+
+        <div class="footer-column">
+          <h3>CUSTOMER SERVICE</h3>
+          <a href="../ABOUT/About.html"><p class="details">Contact Us</p></a>
+          <a href="#"><p class="details">Returns Policy</p></a>
+          <a href="../ABOUT/About.html"><p class="details">Help & FAQ</p></a>
+        </div>
+
+        <div class="footer-column">
+          <h3>ABOUT US</h3>
+          <a href="../ABOUT/About.html"><p class="details">About Us</p></a>
+          <a href="#"><p class="details">Privacy Policy</p></a>
+          <a href="#"><p class="details">Terms & Conditions</p></a>
+        </div>
+      </div>
+      <hr />
+      <p class="copyright">&#169; Computer World</p>
+    </footer>
+    <button id="scroll-top-button">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+        <path d="M12 3l-9 9h6v9h6v-9h6z" />
+      </svg>
+    </button>
+  </body>
+  <script src="./Cart.js"></script>
+  <!-- FOR SCROLL & TOGGLE FUNCTIONALITY -->
+  <script src="../COMMON/scroll.js"></script>
+  <script src="../COMMON/Toggle-Mode.js"></script>
+  <script
+    type="module"
+    src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"
+  ></script>
+  <script
+    nomodule
+    src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"
+  ></script>
+</html>

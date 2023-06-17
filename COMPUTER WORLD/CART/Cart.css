@@ -1,0 +1,260 @@
+body {
+  background-color: var(--themeColor1);
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+#cart-container {
+  margin: 40px auto;
+  padding: 15px;
+  width: 95%;
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  gap: 30px;
+  border: 2px dashed hsla(3, 81%, 42%, 0.372);
+  background-image: url(../PHOTOS/Backimages/1000_F_93152115_iplOX3rTJZci61xhDjrhUB1NspGe5q7e-removebg-preview.png);
+}
+#cart-container .card {
+  width: 20%;
+  height: 27em;
+  background-color: var(--themeColor2);
+  position: relative;
+  border-radius: 8px;
+  box-shadow: 0 0 8px black;
+  color: var(--textColor);
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  border: 1.8px solid var(--mainColor);
+  overflow: hidden;
+  font-family: Arial, Helvetica, sans-serif;
+  letter-spacing: 0.5px;
+  transition: 0.4s ease;
+}
+#cart-container .card div {
+  padding-bottom: 10px;
+}
+#cart-container .card .card-title {
+  width: 100%;
+  height: 10%;
+  padding: 12px;
+  font-size: 0.9em;
+  font-weight: bold;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  line-height: 20px;
+}
+#cart-container .card .img {
+  background-color: var(--themeColor1);
+  width: 100%;
+  height: 50%;
+  margin: 0 auto;
+}
+#cart-container .card:hover {
+  transform: scale(1.03, 1.03);
+  transform-origin: center center;
+}
+#cart-container .info-section {
+  width: 100%;
+  height: 11%;
+}
+#cart-container .info-section .info {
+  width: 100%;
+  padding: 2px;
+  color: #b1a7a7;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+}
+#cart-container .info-section .info div {
+  width: 45%;
+  padding: 1.5%;
+  font-size: 0.9em;
+}
+#cart-container .info-section .info div:nth-child(odd) {
+  color: var(--textColor);
+}
+#cart-container .info-section .info div:nth-child(even) {
+  text-align: end;
+  color: var(--mainColor);
+}
+#cart-container .card .info-section::before {
+  content: "";
+  position: absolute;
+  width: 0;
+  height: 32%;
+  border-left: 2px dashed var(--productTheme);
+  left: 50%;
+}
+#cart-container .card .info-section::after {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 0;
+  border-bottom: 2px dashed var(--productTheme);
+  bottom: 12%;
+}
+#cart-container .card .price {
+  height: 4%;
+  padding-left: 0.2em;
+  font-size: 1.3em;
+  color: var(--mainColor);
+  margin-bottom: 5%;
+}
+#cart-container .card .buy-section {
+  width: 100%;
+  height: 13%;
+  display: flex;
+  font-weight: bold;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+  color: var(--productTextColor);
+}
+#cart-container .card .buy-section .addToCartBtn {
+  width: 84px;
+  height: 35px;
+  margin-top: 6px;
+  background: none;
+  border: none;
+  border-radius: 5px;
+  position: relative;
+  z-index: 1;
+  cursor: pointer;
+  color: var(--productTextColor);
+  margin-right: 70px;
+}
+#cart-container .card .buy-section .counter {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+#cart-container .card .buy-section .counter button {
+  width: 25px;
+  height: 22px;
+  margin: 0 6px;
+  font-size: 18px;
+  background: none;
+  border: none;
+  cursor: pointer;
+  position: relative;
+  z-index: 1;
+  color: var(--productTextColor);
+}
+#cart-container .card .buy-section .counter span {
+  color: var(--productTheme);
+}
+
+#cart-container .card .buy-section .addToCartBtn::before,
+#cart-container .card .buy-section .counter button::before {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  z-index: -2;
+  background-color: var(--productTheme);
+}
+#cart-container .card .buy-section .addToCartBtn::after,
+#cart-container .card .buy-section .counter button::after {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  z-index: -1;
+  transform-origin: left center;
+  transform: rotateY(90deg);
+  transition: all 0.2s ease;
+  background-color: brown;
+}
+#cart-container .card .buy-section .addToCartBtn:hover::after,
+#cart-container .card .buy-section .counter button:hover::after {
+  transform: rotateY(0deg);
+}
+main .tools-container {
+  display: flex;
+  flex-wrap: nowrap;
+  width: 500px;
+  margin: auto;
+  justify-content: space-evenly;
+}
+main .tools-container .total-cost-container {
+  color: var(--textColor);
+  background-color: var(--themeColor2);
+  min-width: 140px;
+  max-width: 250px;
+  height: 40px;
+  font-size: 18px;
+  font-family: "Times New Roman", Times, serif;
+  display: inline-flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: nowrap;
+  overflow: hidden;
+  border-radius: 10px;
+}
+main .tools-container .total-cost-container #total {
+  margin: 20px;
+}
+main .tools-container .total-cost-container #total-icon {
+  height: 100%;
+  width: 40px;
+  display: grid;
+  place-items: center;
+  background-color: rgb(100, 14, 14);
+  border-top-right-radius: 10px;
+  border-bottom-right-radius: 10px;
+}
+main .tools-container #clearCartBtn {
+  border: none;
+  color: var(--textColor);
+  background-color: var(--themeColor2);
+  width: 160px;
+  height: 40px;
+  font-size: 18px;
+  font-family: "Times New Roman", Times, serif;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: nowrap;
+  border-radius: 10px;
+  padding: 0;
+  cursor: pointer;
+  position: relative;
+}
+main .tools-container #clearCartBtn #trash {
+  margin-left: 20px;
+  transition: 0.5s;
+}
+main .tools-container #clearCartBtn .trash-icon {
+  height: 100%;
+  width: 40px;
+  display: grid;
+  place-items: center;
+  background-color: rgb(100, 14, 14);
+  border-top-right-radius: 10px;
+  border-bottom-right-radius: 10px;
+  transition: 0.5s;
+  position: absolute;
+  right: 0;
+}
+main .tools-container #clearCartBtn:hover > .trash-icon {
+  width: 100%;
+  transform: translateX(0);
+  border-radius: 10px;
+}
+main .tools-container #clearCartBtn:hover > #trash {
+  color: transparent;
+  transform: translateX(-20);
+}
+#emptyCartMessage {
+  color: var(--productTheme);
+  font-weight: bold;
+  font-style: italic;
+}
+#emptyCartMessage:hover {
+  opacity: 0.4;
+}

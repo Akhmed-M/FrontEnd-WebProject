@@ -1,0 +1,356 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <link
+      rel="stylesheet"
+      href="https://use.fontawesome.com/releases/v5.14.0/css/all.css"
+      integrity="sha384-HzLeBuhoNPvSl5KYnjx0BT+WB0QEEqLprO+NBkkk5gbc67FTaL7XIGa2w1L0Xbgc"
+      crossorigin="anonymous"
+    />
+    <link
+      rel="shortcut icon"
+      href="../PHOTOS/Icons/home.png"
+      type="image/x-icon"
+    />
+    <!-- CSS -->
+    <link rel="stylesheet" href="../COMMON/all.css" />
+    <link rel="stylesheet" href="./Home.css" />
+
+    <title>Home</title>
+  </head>
+
+  <body>
+    <!-- Greeting -->
+    <div class="alert-container">
+      <h2>Welcome to Computer World!</h2>
+      <p>
+        We offer a wide range of products at great prices.<br />Please feel free
+        to browse our website and contact us if you have any questions or
+        suggestions.
+      </p>
+      <button onclick="disappear()">Thank You</button>
+    </div>
+
+    <header>
+      <div class="name">
+        <span>&nbsp;COMPUTER WORLD</span>
+        <span>&nbsp;COMPUTER WORLD</span>
+      </div>
+      <div class="end-section">
+        <label class="switch">
+          <input type="checkbox" id="toggle" />
+          <span class="slider"></span>
+        </label>
+      </div>
+    </header>
+    <div class="slideshow-container">
+      <div class="mySlides">
+        <img class="slider-img" src="../PHOTOS/Newfolder/1st-slide.jpeg" />
+      </div>
+
+      <div class="mySlides">
+        <img class="slider-img" src="../PHOTOS/Newfolder/2ndoriginal1.jpg" />
+      </div>
+
+      <div class="mySlides">
+        <img class="slider-img" src="../PHOTOS/Newfolder/3rd-slide.jpeg" />
+      </div>
+
+      <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+      <a class="next" onclick="plusSlides(1)">&#10095;</a>
+    </div>
+    <br />
+
+    <div id="dotsDiv">
+      <span class="dot" onclick="currentSlide(1)"></span>
+      <span class="dot" onclick="currentSlide(2)"></span>
+      <span class="dot" onclick="currentSlide(3)"></span>
+    </div>
+    <nav>
+      <a href="../HOME/Home.html">Home</a>
+      <a href="../PRODUCTS/Products.html">Products</a>
+      <a href="../CART/Cart.html">Your Cart</a>
+      <a href="../REGISTER/Register.html">Register</a>
+      <a href="../ABOUT/About.html">About Us</a>
+    </nav>
+    <hr class="head-hr" />
+
+    <main>
+      <!-- SLIDE SHOW -->
+
+      <h1 class="featuringLaptops">FEATURED LAPTOPS</h1>
+
+      <!-- FEATURING THE ACCESSORIES PAGE -->
+
+      <div class="accessories">
+        <div class="card">
+          <div class="card-title">
+            HP Victus Core I7-12650H - 16GB RAM - 512GB SSD Gaming Laptop
+          </div>
+          <img src="../PHOTOS/Newfolder/laptop1_prev_ui.png" class="img" />
+          <div class="info-section">
+            <div class="info">
+              <div>Model</div>
+              <div>VICTUS</div>
+              <div>Brand</div>
+              <div>HP</div>
+            </div>
+          </div>
+          <div class="price"><span>699</span>$</div>
+          <div class="buy-section">
+            <a class="sb" href="../PRODUCTS/Products.html"
+              ><button class="addToCartBtn">Shop Now</button></a
+            >
+          </div>
+        </div>
+
+        <div class="card">
+          <div class="card-title">
+            Lenovo V15 G2 ITL 82KB0016FE - Core I5-1135G7 - 8GB RAM - 256GB SSD
+            - 15.6" Laptop
+          </div>
+          <img src="../PHOTOS/Newfolder/laptop2_prev_ui.png" class="img" />
+          <div class="info-section">
+            <div class="info">
+              <div>Model</div>
+              <div>V15 G2 ITL</div>
+              <div>Brand</div>
+              <div>LENOVO</div>
+            </div>
+          </div>
+          <div class="price"><span>499</span>$</div>
+          <div class="buy-section">
+            <a class="sb" href="../PRODUCTS/Products.html"
+              ><button class="addToCartBtn">Shop Now</button></a
+            >
+          </div>
+        </div>
+
+        <div class="card">
+          <div class="card-title">
+            MSI Delta - AMD Ryzen 7 5800H - 16GB RAM - 1TB SSD - RX6700M 10GB
+          </div>
+          <img src="../PHOTOS/Newfolder/last.png" class="img" />
+          <div class="info-section">
+            <div class="info">
+              <div>Model</div>
+              <div>DELTA</div>
+              <div>Brand</div>
+              <div>MSI</div>
+            </div>
+          </div>
+          <div class="price"><span>1299</span>$</div>
+          <div class="buy-section">
+            <a class="sb" href="../PRODUCTS/Products.html"
+              ><button class="addToCartBtn">Shop Now</button></a
+            >
+          </div>
+        </div>
+
+        <div class="card">
+          <div class="card-title">
+            Asus TUF Ryzen 7 6800H - 8GB RAM - 512GB SSD - RTX 3050Ti 4GB Laptop
+          </div>
+          <img src="../PHOTOS/Newfolder/laptop3_prev_ui.png" class="img" />
+          <div class="info-section">
+            <div class="info">
+              <div>Model</div>
+              <div>TUF A15</div>
+              <div>Brand</div>
+              <div>ASUS</div>
+            </div>
+          </div>
+          <div class="price"><span>599</span>$</div>
+          <div class="buy-section">
+            <a class="sb" href="../PRODUCTS/Products.html"
+              ><button class="addToCartBtn">Shop Now</button></a
+            >
+          </div>
+        </div>
+      </div>
+
+      <h1 class="featuringLaptops">FEATURED COMPUTER ACCESSORIES</h1>
+
+      <div class="accessories">
+        <div class="card">
+          <div class="card-title">Over-Ear Headphones Brown and gold</div>
+          <img
+            src="../PHOTOS/images/Montblanc MB 01 Over-Ear Headphones Brown and gold (312.99$).png"
+            class="img"
+          />
+          <div class="info-section">
+            <div class="info">
+              <div>Model</div>
+              <div>MB 01</div>
+              <div>Brand</div>
+              <div>MONTBLANC</div>
+            </div>
+          </div>
+          <div class="price"><span>312.99</span>$</div>
+          <div class="buy-section">
+            <a class="sb" href="../PRODUCTS/Products.html"
+              ><button class="addToCartBtn">Shop Now</button></a
+            >
+          </div>
+        </div>
+        <div class="card">
+          <div class="card-title">Razer DeathAdder Elite Gaming Mouse</div>
+          <img
+            src="../PHOTOS/images/Razer DeathAdder Elite Gaming Mouse (46$).png"
+            class="img"
+          />
+          <div class="info-section">
+            <div class="info">
+              <div>Model</div>
+              <div>ELITE</div>
+              <div>Brand</div>
+              <div>RAZER</div>
+            </div>
+          </div>
+          <div class="price"><span>46.00</span>$</div>
+          <div class="buy-section">
+            <a class="sb" href="../PRODUCTS/Products.html"
+              ><button class="addToCartBtn">Shop Now</button></a
+            >
+          </div>
+        </div>
+        <div class="card">
+          <div class="card-title">HyperX Fury Large Gaming Mouse Pad</div>
+          <img
+            src="../PHOTOS/images/HyperX_Fury_S_Pro_Gaming_Mouse_Pad_Large_-_HX-MPFS-L_20.45.png"
+            class="img"
+          />
+          <div class="info-section">
+            <div class="info">
+              <div>Model</div>
+              <div>SPEED</div>
+              <div>Brand</div>
+              <div>HYPERX</div>
+            </div>
+          </div>
+          <div class="price">13.45<span></span>$</div>
+          <div class="buy-section">
+            <a class="sb" href="../PRODUCTS/Products.html"
+              ><button class="addToCartBtn">Shop Now</button></a
+            >
+          </div>
+        </div>
+        <div class="card">
+          <div class="card-title">
+            Redragon K501 Gaming Keyboard 7 Color Backlight
+          </div>
+          <img
+            src="../PHOTOS/images/Redragon K501 Gaming Keyboard Asura 7 Color LED Backlight (39.99$).png"
+            class="img"
+          />
+          <div class="info-section">
+            <div class="info">
+              <div>Model</div>
+              <div>K501</div>
+              <div>Brand</div>
+              <div>REDRAGON</div>
+            </div>
+          </div>
+          <div class="price"><span>39.99</span>$</div>
+          <div class="buy-section">
+            <a class="sb" href="../PRODUCTS/Products.html"
+              ><button class="addToCartBtn">Shop Now</button></a
+            >
+          </div>
+        </div>
+      </div>
+
+      <!-- FEATURING OTHER PAGES -->
+      <hr />
+      <div class="featuringLaptops">
+        <h1>ADD TO CART</h1>
+        <h3>
+          Ready to checkout? View your cart now and complete your purchase with
+          ease. Our simple and secure checkout process ensures a hassle-free
+          shopping experience.
+        </h3>
+        <a href="../CART/Cart.html"
+          ><button class="learnmore">Check Out</button></a
+        >
+      </div>
+      <hr />
+      <div class="featuringLaptops">
+        <h1>WHO ARE WE</h1>
+        <h3>
+          We are a team of five members who collaborated on this project. Our
+          project was completed as a part of of the Web Development - Client
+          Side course for the Computer Science department at the Lebanese
+          University.
+        </h3>
+        <a href="../ABOUT/About.html"
+          ><button class="learnmore">Read More</button></a
+        >
+      </div>
+    </main>
+    <hr class="hr" />
+
+    <!-- Footer -->
+    <footer>
+      <div class="footer-container">
+        <div class="footer-column1">
+          <p>
+            If you have any question, please contact us at: <br />
+            Computer.World@gmail.com
+          </p>
+
+          <h3>Follow Us</h3>
+          <div class="social-icons">
+            <a href="#">
+              <i class="fab fa-facebook-square fa-2x"></i>
+            </a>
+            <a href="#">
+              <i class="fab fa-instagram fa-2x"></i>
+            </a>
+            <a href="#">
+              <i class="fab fa-twitter-square fa-2x"></i>
+            </a>
+            <a href="#">
+              <i class="fab fa-github-square fa-2x"></i>
+            </a>
+          </div>
+        </div>
+
+        <div class="footer-column">
+          <h3>CATEGORIES</h3>
+          <a href="../PRODUCTS/Products.html"
+            ><p class="details">Products</p></a
+          >
+          <a href="../CART/Cart.html"><p class="details">Your Cart</p></a>
+          <a href="../REGISTER/Register.html"
+            ><p class="details">Register</p></a
+          >
+        </div>
+
+        <div class="footer-column">
+          <h3>CUSTOMER SERVICE</h3>
+          <a href="../ABOUT/About.html"><p class="details">Contact Us</p></a>
+          <a href="#"><p class="details">Returns Policy</p></a>
+          <a href="../ABOUT/About.html"><p class="details">Help & FAQ</p></a>
+        </div>
+
+        <div class="footer-column">
+          <h3>ABOUT US</h3>
+          <a href="../ABOUT/About.html"><p class="details">About Us</p></a>
+          <a href="#"><p class="details">Privacy Policy</p></a>
+          <a href="#"><p class="details">Terms & Conditions</p></a>
+        </div>
+      </div>
+      <hr />
+      <p class="copyright">&#169; Computer World</p>
+    </footer>
+    <button id="scroll-top-button">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+        <path d="M12 3l-9 9h6v9h6v-9h6z" />
+      </svg>
+    </button>
+  </body>
+  <script src="./Home.js"></script>
+  <!-- FOR SCROLL & TOGGLE FUNCTIONALITY -->
+  <script src="../COMMON/scroll.js"></script>
+  <script src="../COMMON/Toggle-Mode.js"></script>
+</html>
